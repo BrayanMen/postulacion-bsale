@@ -28,4 +28,38 @@
     <li>Si el asiento de un acompañante adulto está ocupado, se asigna al menor de edad el siguiente asiento disponible contiguo a su acompañante en la misma clase.</li>
     <li>Si no hay asientos disponibles contiguos a su acompañante en la misma clase, se asigna al menor de edad el siguiente asiento disponible en la misma clase.</li>
   </ul>
+ <li>Si un pasajero tiene varias tarjetas de embarque, tratar de que queden juntas o cerca en los asientos.</li>
+ <li>Los campos en la bd están llamados en Snake case, pero en la respuesta de la API deben ser transformados a Camel case.</li>
+ <li>El servicio debe tener la siguiente estructura:</li>
+ <ul>
+  <li><code>GET /flights/:id/passengers</code></li>
+ </ul>
+ <li>Respuesta Exitosa:</li>
+ <ul>
+  <li><code>{
+    "code": 200,
+    "data": {
+        "flightId": 1,
+        "takeoffDateTime": 1688207580,
+        "takeoffAirport": "Aeropuerto Internacional Arturo Merino Benitez, Chile",
+        "landingDateTime": 1688221980,
+        "landingAirport": "Aeropuerto Internacional Jorge Cháve, Perú",
+        "airplaneId": 1,
+        "passengers": [
+            {
+                "passengerId": 98,
+                "dni": 172426876,
+                "name": "Abril",
+                "age": 28,
+                "country": "Chile",
+                "boardingPassId": 496,
+                "purchaseId": 3,
+                "seatTypeId": 3,
+                "seatId": 15
+            },
+            {...}
+        ]
+    }
+} </code></li>
+ </ul>
 </ol>
