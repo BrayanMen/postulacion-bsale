@@ -36,7 +36,8 @@
  </ul>
  <li>Respuesta Exitosa:</li>
  <ul>
-  <li><code>{
+  <li><code>
+   {
     "code": 200,
     "data": {
         "flightId": 1,
@@ -60,6 +61,25 @@
             {...}
         ]
     }
-} </code></li>
+} 
+  </code></li>
+ </ul>
+ <li>Vuelo no encontrado:</li>
+ <ul>
+  <li><code>
+   {
+"code": 404,
+"data": {}
+}
+  </code></li>
+ </ul>
+ <li>Caso de Error:</li>
+ <ul>
+  <li><code>
+   {
+"code": 400,
+"errors": "could not connect to db"
+}
+  </code></li>
  </ul>
 </ol>
